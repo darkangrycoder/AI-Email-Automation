@@ -1,0 +1,39 @@
+# ── Email Generation Assistant ── requirements.txt ──────────────────────────
+# Install via:  pip install -r requirements.txt
+#
+# LLMs are served LOCALLY through Ollama (no API key required).
+# Ollama is installed/configured automatically by install.py.
+
+# Agent framework
+crewai>=0.86.0
+crewai-tools>=0.17.0
+
+# LLM routing (CrewAI delegates to LiteLLM for Ollama calls)
+litellm>=1.40.0
+
+# LangChain (prompt management + LangSmith tracing)
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# Evaluation — semantic similarity (Metric 1: FCS)
+sentence-transformers>=2.7.0
+scikit-learn>=1.5.0
+
+# Evaluation — ROUGE-L (Metric 3: EQS)
+rouge-score>=0.1.2
+
+# Evaluation — readability (Metric 3: EQS)
+textstat>=0.7.4
+
+# Evaluation — sentence tokenisation
+nltk>=3.8.1
+
+# Report generation
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Utilities
+scipy>=1.13.0
+pydantic>=2.8.0
+requests>=2.32.0
+tqdm>=4.66.4
